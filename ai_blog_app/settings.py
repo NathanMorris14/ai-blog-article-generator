@@ -83,13 +83,14 @@ WSGI_APPLICATION = 'ai_blog_app.wsgi.application'
 # }
 
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'NAME',
-        'USER': 'USER',
-        'PASSWORD': 'PASSWORD',
-        'HOST': 'HOST',
+        'NAME': 'postgres',
+        'USER': 'ai-web-app_owner',
+        'PASSWORD': 'ExTtXj15bPgA',
+        'HOST': 'ep-square-term-a56oherw.us-east-2.aws.neon.tech/ai-web-app?sslmode=require',
         'PORT': '5432',
     }
 }
