@@ -15,7 +15,7 @@ from .models import BlogPost
 # Create your views here.
 @login_required
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'homepage.html')
 
 @csrf_exempt
 def generate_blog(request):
@@ -145,4 +145,8 @@ def user_signup(request):
 
 def user_logout(request):
     logout(request)
-    return redirect('/')
+    
+    # Any additional actions you want to perform after logout
+    
+    # Return an appropriate response
+    return redirect ('/')

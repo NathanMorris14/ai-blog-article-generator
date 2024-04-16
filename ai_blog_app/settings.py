@@ -29,21 +29,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = []
-
+DEBUG = True
 
 # WEBSITE DOMAIN
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'NATE08']
 
 # SECURITY WARNING: When set to true it the webpage will be Using a secure-only session cookie
-SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
 
 # SECURITY WARNING: It’s recommended to use this setting when you have an SSL certificate installed on your server and want to enforce HTTPS across your site.
-SECURE_SSL_REDIRECT = True
-CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = False
+CSRF_COOKIE_SECURE = False
 
 # SECURITY WARNING: Enabling HSTS carelessly can cause serious, irreversible problems.
-SECURE_HSTS_SECONDS = 0
+# SECURE_HSTS_SECONDS = 0
 
 # Application definition
 
