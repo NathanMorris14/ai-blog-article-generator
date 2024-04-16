@@ -26,13 +26,24 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3@7%!_)(&g2a5^&)13@5u*ss)wr!vf%2gy1isj_ujeu^f)82+)'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = []
 
-ALLOWED_HOSTS = []
 
+# WEBSITE DOMAIN
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'NATE08']
+
+# SECURITY WARNING: When set to true it the webpage will be Using a secure-only session cookie
+SESSION_COOKIE_SECURE = True
+
+# SECURITY WARNING: It’s recommended to use this setting when you have an SSL certificate installed on your server and want to enforce HTTPS across your site.
+SECURE_SSL_REDIRECT = True
+CSRF_COOKIE_SECURE = True
+
+# SECURITY WARNING: Enabling HSTS carelessly can cause serious, irreversible problems.
+SECURE_HSTS_SECONDS = 0
 
 # Application definition
 
